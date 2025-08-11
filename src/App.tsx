@@ -12,9 +12,9 @@ import Background3D from './components/Background3D';
 
 function App() {
   return (
-    <div className="min-h-screen relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* 3D Computer Science Background - Temporarily disabled due to caching issues */}
-      {/* <Background3D /> */}
+    <div className="min-h-screen relative">
+      {/* 3D Computer Science Background */}
+      <Background3D />
 
       <Navbar />
 

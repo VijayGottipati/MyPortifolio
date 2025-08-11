@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { FaEnvelope, FaWhatsapp, FaPaperPlane } from 'react-icons/fa';
 import { YOUR_EMAIL, YOUR_PHONE } from '../utils/constants';
-import { apiService, ContactFormData } from '../services/api';
+import { apiService } from '../services/api';
 import SectionHeader from './SectionHeader';
 
 interface ContactForm {
