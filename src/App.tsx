@@ -9,6 +9,7 @@ import Tools from './components/Tools';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Background3D from './components/Background3D';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -67,6 +68,9 @@ function App() {
       </main>
 
       <Footer />
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }
