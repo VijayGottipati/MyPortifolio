@@ -6,6 +6,7 @@ import { apiService } from '../services/api';
 const Footer = () => {
   const [visitorCount, setVisitorCount] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [apiAvailable, setApiAvailable] = useState(false);
 
   useEffect(() => {
     const initializeVisitorCount = async () => {
@@ -17,6 +18,7 @@ const Footer = () => {
           // Increment the count for new visitor
           const newCount = await apiService.incrementVisitorCount();
           setVisitorCount(newCount.count);
+          setApiAvailable(true);
 
           // Mark as visited in this session
           sessionStorage.setItem('portfolio_visited', 'true');
@@ -24,11 +26,12 @@ const Footer = () => {
           // Just get the current count
           const currentCount = await apiService.getVisitorCount();
           setVisitorCount(currentCount.count);
+          setApiAvailable(true);
         }
       } catch (error) {
         console.error('Failed to initialize visitor count:', error);
-        // Fallback to a default count if API fails
-        setVisitorCount(1234);
+        // Don't show visitor counter if API is not available
+        setApiAvailable(false);
       } finally {
         setIsLoading(false);
       }
@@ -60,17 +63,12 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center gap-4 text-sm text-gray-400"
           >
-            <span>
-              {isLoading ? (
-                <span className="flex items-center gap-2">
-                  <div className="w-3 h-3 border border-primary-500 border-t-transparent rounded-full animate-spin"></div>
-                  Loading visitors...
-                </span>
-              ) : (
-                `No. of Visitors | ${visitorCount.toLocaleString()}`
-              )}
-            </span>
-            <span>•</span>
+            {apiAvailable && !isLoading && (
+              <>
+                <span>No. of Visitors | {visitorCount.toLocaleString()}</span>
+                <span>•</span>
+              </>
+            )}
             <span>© 2025 All rights reserved</span>
           </motion.div>
         </div>
