@@ -6,6 +6,7 @@ const VisitorCounter: React.FC = () => {
   const [visitorCount, setVisitorCount] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [hasIncremented, setHasIncremented] = useState(false);
+  const [apiAvailable, setApiAvailable] = useState(false);
 
   useEffect(() => {
     const initializeVisitorCount = async () => {
@@ -13,23 +14,24 @@ const VisitorCounter: React.FC = () => {
         // First, get the current count
         const currentCount = await apiService.getVisitorCount();
         setVisitorCount(currentCount.count);
-        
+        setApiAvailable(true);
+
         // Check if we've already incremented for this session
         const hasVisited = sessionStorage.getItem('portfolio_visited');
-        
+
         if (!hasVisited) {
           // Increment the count for new visitor
           const newCount = await apiService.incrementVisitorCount();
           setVisitorCount(newCount.count);
           setHasIncremented(true);
-          
+
           // Mark as visited in this session
           sessionStorage.setItem('portfolio_visited', 'true');
         }
       } catch (error) {
         console.error('Failed to initialize visitor count:', error);
-        // Fallback to a default count if API fails
-        setVisitorCount(1234);
+        // Don't show visitor counter if API is not available
+        setApiAvailable(false);
       } finally {
         setIsLoading(false);
       }
@@ -38,19 +40,9 @@ const VisitorCounter: React.FC = () => {
     initializeVisitorCount();
   }, []);
 
-  if (isLoading) {
-    return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="fixed bottom-4 right-4 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg px-4 py-2 text-white shadow-lg"
-      >
-        <div className="flex items-center space-x-2">
-          <div className="w-4 h-4 border-2 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
-          <span className="text-sm">Loading...</span>
-        </div>
-      </motion.div>
-    );
+  // Don't show anything if API is not available or still loading
+  if (isLoading || !apiAvailable) {
+    return null;
   }
 
   return (
