@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "server": "node server.cjs",
-    "dev:full": "concurrently \"npm run dev\" \"npm run server\""
+    "dev:full": "concurrently \"npm run dev\" \"npm run server\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
