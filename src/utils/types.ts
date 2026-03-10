@@ -71,3 +71,14 @@ export interface Volunteer {
   location: string;
   description: string[];
 }
+
+export interface Hackathon {
+  id: string;
+  title: string;
+  hackathonName: string;
+  date: string;
+  location: string;
+  placement: string;
+  description: string[];
+  technologies: string[];
+}

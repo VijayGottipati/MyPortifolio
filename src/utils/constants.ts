@@ -1,17 +1,18 @@
 export const NAV_ITEMS = [
   { name: 'Introduction', href: '#introduction' },
   { name: 'Education', href: '#education' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Hackathons', href: '#hackathons' },
   { name: 'Volunteer', href: '#volunteer' },
   { name: 'Certifications', href: '#certifications' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ] as const;
 
 export const PROJECT_CATEGORIES = [
   'Large Language Models',
-  'Deep Learning', 
+  'Deep Learning',
   'Computer Vision',
   'Other'
 ] as const;

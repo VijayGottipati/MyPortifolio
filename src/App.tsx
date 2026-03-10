@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Education from './components/Education';
+import Tools from './components/Tools';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Hackathons from './components/Hackathons';
 import Volunteer from './components/Volunteer';
 import Certifications from './components/Certifications';
-import Tools from './components/Tools';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Background3D from './components/Background3D';
@@ -30,6 +31,12 @@ function App() {
           </div>
         </section>
 
+        <section id="skills" className="section-padding">
+          <div className="container-max section-bg p-8">
+            <Tools />
+          </div>
+        </section>
+
         <section id="experience" className="section-padding">
           <div className="container-max section-bg p-8">
             <Experience />
@@ -42,6 +49,12 @@ function App() {
           </div>
         </section>
 
+        <section id="hackathons" className="section-padding">
+          <div className="container-max section-bg p-8">
+            <Hackathons />
+          </div>
+        </section>
+
         <section id="volunteer" className="section-padding">
           <div className="container-max section-bg p-8">
             <Volunteer />
@@ -51,12 +64,6 @@ function App() {
         <section id="certifications" className="section-padding">
           <div className="container-max section-bg p-8">
             <Certifications />
-          </div>
-        </section>
-
-        <section id="skills" className="section-padding">
-          <div className="container-max section-bg p-8">
-            <Tools />
           </div>
         </section>
 
