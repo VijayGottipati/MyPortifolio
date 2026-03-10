@@ -39,7 +39,7 @@ const Hero = () => {
               >
                 Hi, I'm
               </motion.p>
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -48,16 +48,14 @@ const Hero = () => {
               >
                 {YOUR_NAME}
               </motion.h1>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="text-xl text-gray-300 leading-relaxed"
               >
-                A passionate Machine Learning Engineer and Full-Stack Developer specializing in AI, 
-                computer vision, and large language models. I love building innovative solutions 
-                that make a difference.
+                A passionate Data Scientist and AI Engineer specializing in large language models, agentic workflows, and real-time streaming architectures. I build innovative, robust systems that solve complex problems and drive automation.
               </motion.p>
             </div>
 

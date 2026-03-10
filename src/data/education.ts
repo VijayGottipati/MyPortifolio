@@ -3,22 +3,22 @@ import { Education } from '../utils/types';
 export const education: Education[] = [
   {
     id: '1',
-    institution: 'Birla Institute of Technology & Science (BITS Pilani)',
-    degree: 'Bachelor of Technology',
-    field: 'Computer Science',
-    startYear: '2019',
-    endYear: '2023',
-    location: 'Jalgaon, Maharashtra, India',
-    feedbackBy: 'GPA: 8.6/10 • 2nd place in college coding challenge • Logistics Coordinator - BITS Sports Festival • Event Coordinator - Jashan Cultural Event'
+    institution: 'University name missing, pursuing MS in Data Science',
+    degree: 'Master of Science',
+    field: 'Data Science',
+    startYear: '2024',
+    endYear: '2026',
+    location: 'USA (Assumed/Not specified)',
+    feedbackBy: 'CGPA: 3.45/4.0'
   },
   {
     id: '2',
-    institution: 'Anubhuti School',
-    degree: '12th Class',
-    field: 'Science',
-    startYear: '2017',
-    endYear: '2019',
+    institution: 'Birla Institute of Technology and Science, Pilani',
+    degree: 'Bachelor of Engineering',
+    field: 'Computer Science',
+    startYear: '2019',
+    endYear: '2023',
     location: 'Dubai, UAE',
-    feedbackBy: 'Percentage: 85% • Represented school in district-level football competition • Prominent member of debate club'
+    feedbackBy: 'CGPA: 3.5/4.0'
   }
 ];

@@ -4,20 +4,20 @@ import SectionHeader from './SectionHeader';
 const Tools = () => {
   const toolCategories = [
     {
-      name: 'Programming Languages',
-      tools: ['Java', 'C', 'Python', 'JavaScript', 'HTML', 'CSS']
+      name: 'Programming Languages & Frameworks',
+      tools: ['Python', 'SQL', 'C++', 'JavaScript', 'React', 'Node.js', 'Typescript', 'React-native', 'Django', 'FastAPI']
     },
     {
-      name: 'Databases & Analytics',
-      tools: ['SQL', 'MySQL', 'Hadoop', 'PowerBI', 'Advanced Excel']
+      name: 'ML/AI Frameworks',
+      tools: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Spark', 'Polars', 'HuggingFace', 'Langchain', 'LangGraph']
     },
     {
-      name: 'Frameworks & Tools',
-      tools: ['React', 'Android Studio', 'Azure']
+      name: 'MLOps & Cloud',
+      tools: ['AWS', 'GCP', 'Databricks', 'Docker', 'Kubernetes', 'MLflow', 'Github Actions', 'Opik']
     },
     {
-      name: 'Languages',
-      tools: ['English (Fluent)', 'Telugu (Native)', 'Hindi (Fluent)']
+      name: 'Databases & Tools',
+      tools: ['MongoDB', 'PostgreSQL', 'BigQuery', 'Redis', 'Git', 'CUDA', 'Kafka', 'FastMCP', 'vLLM']
     }
   ];
 
@@ -28,7 +28,7 @@ const Tools = () => {
         title="Tech Stack"
         description="Technologies and tools I work with"
       />
-      
+
       <div className="space-y-8">
         {toolCategories.map((category, categoryIndex) => (
           <motion.div

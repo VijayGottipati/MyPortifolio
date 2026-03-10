@@ -4,30 +4,29 @@ export const experience: Experience[] = [
   {
     id: '1',
     company: 'Lucy Electric',
-    position: 'IT End User Support - Internship',
+    position: 'IT End User Support Intern',
     startDate: '2023-02',
-    endDate: undefined, // Current position
+    endDate: '2023-06',
     location: 'Jebel Ali, Dubai, UAE',
     description: [
-      'Automated packaging and deployment of 20+ software applications using Azure - Microsoft Intune, eliminating manual installation tasks',
-      'Deployed an upgraded IT support portal, utilizing comprehensive test procedures that resulted in a 90% reduction in error rate',
-      'Efficiently resolved incident tickets, cutting escalation time in half, leading to increased productivity and seamless employee workflow',
-      'Implemented remote device policies and security groups, resulting in streamlined issue resolution and enhanced network security',
-      'Consistently completed projects within the allotted time'
+      'Automated enterprise software packaging and deployment for 20+ applications using Microsoft Intune (Azure), eliminating manual installations and improving endpoint provisioning efficiency.',
+      'Deployed and validated an upgraded IT service portal with structured testing workflows, reducing system error rates by 90% and improving internal support reliability.',
+      'Resolved end-user incident tickets and system issues, reducing escalation time by 50% and enabling faster operational recovery across employee workstations.',
+      'Implemented remote device management policies and security groups via Azure-based endpoint management, improving device governance and network security posture.'
     ],
     technologies: ['Azure', 'Microsoft Intune', 'IT Support', 'Network Security', 'Remote Device Management']
   },
   {
     id: '2',
-    company: 'Ibam Systems',
-    position: 'Summer Intern',
+    company: 'IBAM Systems',
+    position: 'Engineering Intern',
     startDate: '2021-06',
     endDate: '2021-08',
     location: 'Al Quoz, Dubai, UAE',
     description: [
-      'Worked on 2D circuit designs for 5 projects using AutoCAD, contributing to our firm\'s successful acquisition of 2 projects',
-      'Provided valuable support to other teams in the firm on 2 additional projects, contributing to data collection efforts and design execution'
+      'Designed 2D ELV circuit layouts for 5 infrastructure projects using AutoCAD, contributing to technical proposals that helped secure 2 client contracts.',
+      'Assisted engineering teams with site data collection, technical documentation, and system design support across additional infrastructure projects.'
     ],
-    technologies: ['AutoCAD', '2D Circuit Design', 'ELV Systems', 'Project Management']
+    technologies: ['AutoCAD', 'ELV Circuit Layout', 'Infrastructure', 'Technical Documentation']
   }
 ];
