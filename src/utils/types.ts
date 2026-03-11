@@ -31,15 +31,6 @@ export interface Experience {
   technologies: string[];
 }
 
-export interface Research {
-  id: string;
-  title: string;
-  venue: string;
-  year: string;
-  doi?: string;
-  link?: string;
-}
-
 export interface Certification {
   id: string;
   name: string;

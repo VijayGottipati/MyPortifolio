@@ -9,14 +9,8 @@ export const achievements: Achievement[] = [
   },
   {
     id: '2',
-    title: 'Winner - AI Tinkerer Hackathon',
+    title: 'AI Tinkerer Hackathon',
     description: 'Architected an autonomous shopping agent pipeline that executes purchases through AI-driven browser automation',
     year: '2025'
-  },
-  {
-    id: '3',
-    title: 'Dean\'s List for Academic Excellence',
-    description: 'Consistently maintained high academic performance throughout university',
-    year: '2019-2023'
   }
 ]; 

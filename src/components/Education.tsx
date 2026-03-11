@@ -10,7 +10,7 @@ const Education = () => {
         title="Academic Journey"
         description="My educational background and academic achievements"
       />
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {education.map((edu, index) => (
           <motion.div
@@ -30,16 +30,16 @@ const Education = () => {
                   {edu.degree} in {edu.field}
                 </p>
               </div>
-              
+
               <div className="flex items-center justify-between text-sm text-gray-400">
                 <span>{edu.startYear} - {edu.endYear}</span>
                 <span>{edu.location}</span>
               </div>
-              
+
               {edu.feedbackBy && (
                 <div className="pt-2 border-t border-gray-700">
-                  <p className="text-sm text-gray-400">
-                    <span className="text-primary-400">Feedback by:</span> {edu.feedbackBy}
+                  <p className="text-sm text-primary-400 font-medium">
+                    {edu.feedbackBy}
                   </p>
                 </div>
               )}

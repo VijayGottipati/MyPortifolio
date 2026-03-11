@@ -3,12 +3,12 @@ import { Education } from '../utils/types';
 export const education: Education[] = [
   {
     id: '1',
-    institution: 'University name missing, pursuing MS in Data Science',
+    institution: 'New York University (NYU)',
     degree: 'Master of Science',
-    field: 'Data Science',
+    field: 'Computer Science',
     startYear: '2024',
     endYear: '2026',
-    location: 'USA (Assumed/Not specified)',
+    location: 'New York, USA',
     feedbackBy: 'CGPA: 3.45/4.0'
   },
   {
